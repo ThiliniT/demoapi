@@ -23,13 +23,6 @@ paths:
       operationId: "getCustomerById"
       description: |
         Retrieve a customer by account id.
-      parameters:
-        - name: accountId
-          in: path
-          description: "Customer account Id"
-          required: true
-          schema:
-            type: string
       responses:
         "200":
           description: "The Customer with Id"

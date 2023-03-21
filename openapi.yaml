@@ -20,39 +20,28 @@ paths:
   /HelloWorld:
     get:
       summary: "greeting with Hello"
-      operationId: "Hellow"
+      operationId: "Hello"
       description: |
-        Retrieve a customer by account id.
+        Greet the user
       responses:
         "200":
-          description: "The Customer with Id"
+          description: "Greeting Message"
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Customer"
+                $ref: "#/components/schemas/Greeting"
 
         "404":
-          description: "Unable to find the Customer"
+          description: "Unable to Greet"
 
 components:
   schemas:
-    Customer:
+    Greeting:
       type: object
       required:
-        - accountId
-        - firstName
-        - lastName
-        - kycStatus
+        - helloMessage
       properties:
-        accountId:
+        HelloMessage:
           type: string
-          example: "1"
-        firstName:
-          type: string
-          example: "John"
-        lastName:
-          type: string
-          example: "Smith"
-        kycStatus:
-          type: string
-          example: "verified"
+          example: "Hello World"
+   

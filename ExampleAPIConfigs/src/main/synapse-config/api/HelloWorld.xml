@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/HelloWorld" name="HelloWorld" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>{"Hello":"World"}</format>
+                <args/>
+            </payloadFactory>
+            <log level="full"/>
+            <property expression="get-property('env','JAVA_HOME')" name="MY_ENV_VAR" scope="default" type="STRING"/>
+            <log level="custom">
+                <property expression="$ctx:MY_ENV_VAR" name="EnvironmentVariableValue"/>
+            </log>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

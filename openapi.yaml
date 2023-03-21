@@ -3,9 +3,9 @@ servers:
   - description: Customer API
     url: http://localhost:8290
 info:
-  description: "CRUD Operations for customer"
+  description: "Sample rest api"
   version: "1.0.0"
-  title: "Customer API"
+  title: "Sample API"
   contact:
     email: "choreo-help@wso2.com"
   license:
@@ -19,8 +19,8 @@ tags:
 paths:
   /HelloWorld:
     get:
-      summary: "Retrieve a customer by id"
-      operationId: "getCustomerById"
+      summary: "greeting with Hello"
+      operationId: "Hellow"
       description: |
         Retrieve a customer by account id.
       responses:
